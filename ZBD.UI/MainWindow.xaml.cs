@@ -48,12 +48,10 @@ namespace ZBD.UI
                     HideBusView();
                     lblNoResult.Visibility = Visibility.Visible;
                 }
-
-         
             }
             catch(Exception ex)
             {
-                
+                // TODO: Show dialog box
             }
            
 
@@ -86,6 +84,20 @@ namespace ZBD.UI
             lblSeats.Visibility = Visibility.Hidden;
 
             btnShowPassengers.Visibility = Visibility.Hidden;
+        }
+
+        private void tbSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Return)
+            {
+                btnSearchClick(sender, e);
+            }
+        }
+
+        private void btnShowPassengers_Click(object sender, RoutedEventArgs e)
+        {
+            PassengersWindow passengersWindow = new PassengersWindow();
+            passengersWindow.Show();
         }
     }
 }
