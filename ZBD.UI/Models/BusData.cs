@@ -24,5 +24,7 @@ namespace ZBD.UI.Models
         public decimal Width { get; set; }
 
         public int Seats { get; set; }
+
+        public IList<Passenger> Passengers { get; set; }
     }
 }

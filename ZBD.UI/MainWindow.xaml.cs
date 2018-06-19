@@ -87,5 +87,10 @@ namespace ZBD.UI
 
             btnShowPassengers.Visibility = Visibility.Hidden;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            BusDataService.GenerateAndInsertRandomData();
+        }
     }
 }
