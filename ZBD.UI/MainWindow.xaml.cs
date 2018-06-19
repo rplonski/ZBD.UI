@@ -99,5 +99,10 @@ namespace ZBD.UI
             PassengersWindow passengersWindow = new PassengersWindow();
             passengersWindow.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            BusDataService.GenerateAndInsertRandomData();
+        }
     }
 }

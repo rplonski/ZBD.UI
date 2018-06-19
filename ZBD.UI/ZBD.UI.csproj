@@ -61,6 +61,7 @@
     </ApplicationDefinition>
     <Compile Include="Models\BusData.cs" />
     <Compile Include="PassengersWindow.xaml.cs">
+    <Compile Include="Models\Passenger.cs" />
       <DependentUpon>PassengersWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\BusDataService.cs" />
