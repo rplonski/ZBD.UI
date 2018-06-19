@@ -60,8 +60,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\BusData.cs" />
-    <Compile Include="PassengersWindow.xaml.cs">
     <Compile Include="Models\Passenger.cs" />
+    <Compile Include="PassengersWindow.xaml.cs">
       <DependentUpon>PassengersWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Services\BusDataService.cs" />
