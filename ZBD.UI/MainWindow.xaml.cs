@@ -26,20 +26,66 @@ namespace ZBD.UI
         public MainWindow()
         {
             InitializeComponent();
-
+            HideBusView();
         
 
         }
 
         private void btnSearchClick(object sender, RoutedEventArgs e)
         {
-            var busData = BusDataService.GetBusDataByName(tbSearch.Text);
-            tbName.Text = busData.Name;
-            tbModel.Text = busData.Model;
-            tbSeats.Text = busData.Seats.ToString();
+            try
+            {
+                var busData = BusDataService.GetBusDataByName(tbSearch.Text);
+                if(busData != null)
+                {
+                    ShowBusView();
+                    tbName.Text = busData.Name;
+                    tbModel.Text = busData.Model;
+                    tbSeats.Text = busData.Seats.ToString();
+                }
+                else
+                {
+                    HideBusView();
+                    lblNoResult.Visibility = Visibility.Visible;
+                }
+
+         
+            }
+            catch(Exception ex)
+            {
+                
+            }
+           
 
 
 
+        }
+
+        private void ShowBusView()
+        {
+            tbName.Visibility = Visibility.Visible;
+            tbModel.Visibility = Visibility.Visible;
+            tbSeats.Visibility = Visibility.Visible;
+
+            lblModel.Visibility = Visibility.Visible;
+            lblName.Visibility = Visibility.Visible;
+            lblSeats.Visibility = Visibility.Visible;
+
+            btnShowPassengers.Visibility = Visibility.Visible;
+            lblNoResult.Visibility = Visibility.Hidden;
+        }
+
+        private void HideBusView()
+        {
+            tbName.Visibility = Visibility.Hidden;
+            tbModel.Visibility = Visibility.Hidden;
+            tbSeats.Visibility = Visibility.Hidden;
+
+            lblModel.Visibility = Visibility.Hidden;
+            lblName.Visibility = Visibility.Hidden;
+            lblSeats.Visibility = Visibility.Hidden;
+
+            btnShowPassengers.Visibility = Visibility.Hidden;
         }
     }
 }
