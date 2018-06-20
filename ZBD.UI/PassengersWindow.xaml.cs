@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ZBD.UI.Models;
 
 namespace ZBD.UI
 {
@@ -19,9 +20,22 @@ namespace ZBD.UI
     /// </summary>
     public partial class PassengersWindow : Window
     {
-        public PassengersWindow()
+        public PassengersWindow(IList<Passenger> passengers)
         {
             InitializeComponent();
+
+            for(int i = 0; i < passengers.Count; i++)
+            {
+                var tbName = (TextBox)this.FindName("tbName" + (i+1).ToString());
+                var tbSurname = (TextBox)this.FindName("tbSurname" + (i + 1).ToString());
+                var tbAge = (TextBox)this.FindName("tbAge" + (i + 1).ToString());
+
+                tbName.Text = passengers[i].Name;
+                tbSurname.Text = passengers[i].Surname;
+                tbAge.Text = passengers[i].Age.ToString();
+
+            }
+
         }
     }
 }

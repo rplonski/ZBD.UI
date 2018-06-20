@@ -96,7 +96,11 @@ namespace ZBD.UI
 
         private void btnShowPassengers_Click(object sender, RoutedEventArgs e)
         {
-            PassengersWindow passengersWindow = new PassengersWindow();
+            var busData = BusDataService.GetBusDataByName(tbName.Text);
+
+            
+
+            PassengersWindow passengersWindow = new PassengersWindow(busData.Passengers);
             passengersWindow.Show();
         }
 
@@ -104,5 +108,7 @@ namespace ZBD.UI
         {
             BusDataService.GenerateAndInsertRandomData();
         }
+
+
     }
 }

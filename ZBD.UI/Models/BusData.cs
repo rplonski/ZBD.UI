@@ -19,11 +19,11 @@ namespace ZBD.UI.Models
 
         public string Model { get; set; }
 
-        public decimal Length { get; set; }
+        public decimal? Length { get; set; }
 
-        public decimal Width { get; set; }
+        public decimal? Width { get; set; }
 
-        public int Seats { get; set; }
+        public int? Seats { get; set; }
 
         public IList<Passenger> Passengers { get; set; }
     }

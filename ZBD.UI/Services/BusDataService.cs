@@ -52,7 +52,7 @@ namespace ZBD.UI.Services
                     Length = random.Next(20, 50),
                     Width = random.Next(10, 30),
                     Model = Path.GetRandomFileName(),
-                    Name = Path.GetRandomFileName(),
+                    Name = "Autobus nr " + i.ToString(),
                     Seats = random.Next(40, 50),
                     Passengers = new List<Passenger>()
                 };
