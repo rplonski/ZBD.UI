@@ -19,10 +19,18 @@
         <TextBox x:Name="tbName" HorizontalAlignment="Left" Height="55" Margin="344,205,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" FontSize="30" IsReadOnly="True"/>
         <Label x:Name="lblModel" Content="Model" HorizontalAlignment="Left" Margin="244,260,0,0" VerticalAlignment="Top" Height="59" Width="95" FontSize="30"/>
         <TextBox x:Name="tbModel" HorizontalAlignment="Left" Height="55" Margin="344,265,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" FontSize="30" IsReadOnly="True"/>
-        <Label x:Name="lblSeats" Content="Liczba miejsc" HorizontalAlignment="Left" Margin="158,321,0,0" VerticalAlignment="Top" Height="59" Width="181" FontSize="30"/>
-        <TextBox x:Name="tbSeats"  HorizontalAlignment="Left" Height="55" Margin="344,325,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" FontSize="30" IsReadOnly="True"/>
+        <Label x:Name="lblSeats" Content="Liczba miejsc" HorizontalAlignment="Left" Margin="158,434,0,0" VerticalAlignment="Top" Height="59" Width="181" FontSize="30"/>
+        <TextBox x:Name="tbSeats"  HorizontalAlignment="Left" Height="55" Margin="344,438,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" FontSize="30" IsReadOnly="True"/>
         <Button x:Name="btnShowPassengers"  Content="Wyświetl listę pasażerów" HorizontalAlignment="Left" FontSize="20" Margin="192,161,0,0" VerticalAlignment="Top" Width="318" Height="35" Click="btnShowPassengers_Click"/>
         <Label x:Name="lblNoResult" Content="Nie znaleziono takiego autobusu!" Foreground="Red" Visibility="Hidden" HorizontalAlignment="Left" Margin="252,135,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.332,-0.161" Width="192"/>
         <Button Content="Mieszaj dane" HorizontalAlignment="Left" Margin="460,579,0,0" VerticalAlignment="Top" Width="207" Height="53" Click="Button_Click"/>
+        <Button x:Name="btnClear" Content="Wyczysc dane" HorizontalAlignment="Left" Margin="304,596,0,0" VerticalAlignment="Top" Width="75" Click="btnClear_Click"/>
+        <Button x:Name="btnInitializeData" Content="Inicjalizuj dane"  Click="btnInitializeData_Click" HorizontalAlignment="Left" Margin="119,596,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="lblLocalization" Content="Aktualna lokalizacja" HorizontalAlignment="Left" Margin="70,491,0,0" VerticalAlignment="Top" Height="59" Width="269" FontSize="30"/>
+        <TextBox x:Name="tbLocalization"  HorizontalAlignment="Left" Height="55" Margin="344,498,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" FontSize="30" IsReadOnly="True"/>
+        <Label x:Name="lblWidth" Content="Wysokość [m]" HorizontalAlignment="Left" Margin="144,319,0,0" VerticalAlignment="Top" Height="59" Width="195" FontSize="30"/>
+        <TextBox x:Name="tbWidth" HorizontalAlignment="Left" Height="55" Margin="344,324,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" FontSize="30" IsReadOnly="True"/>
+        <Label x:Name="lblLength" Content="Długość [m]" HorizontalAlignment="Left" Margin="172,375,0,0" VerticalAlignment="Top" Height="59" Width="167" FontSize="30"/>
+        <TextBox x:Name="tbLength" HorizontalAlignment="Left" Height="55" Margin="344,380,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" FontSize="30" IsReadOnly="True"/>
     </Grid>
 </Window>

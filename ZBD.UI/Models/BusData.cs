@@ -25,6 +25,8 @@ namespace ZBD.UI.Models
 
         public int? Seats { get; set; }
 
+        public string Localization { get; set; }
+
         public IList<Passenger> Passengers { get; set; }
     }
 }

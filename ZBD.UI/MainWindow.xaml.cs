@@ -42,6 +42,9 @@ namespace ZBD.UI
                     tbName.Text = busData.Name;
                     tbModel.Text = busData.Model;
                     tbSeats.Text = busData.Seats.ToString();
+                    tbLocalization.Text = busData.Localization;
+                    tbWidth.Text = busData.Width.ToString();
+                    tbLength.Text = busData.Length.ToString();
                 }
                 else
                 {
@@ -64,10 +67,16 @@ namespace ZBD.UI
             tbName.Visibility = Visibility.Visible;
             tbModel.Visibility = Visibility.Visible;
             tbSeats.Visibility = Visibility.Visible;
+            tbLocalization.Visibility = Visibility.Visible;
+            tbLength.Visibility = Visibility.Visible;
+            tbWidth.Visibility = Visibility.Visible;
 
             lblModel.Visibility = Visibility.Visible;
             lblName.Visibility = Visibility.Visible;
             lblSeats.Visibility = Visibility.Visible;
+            lblLocalization.Visibility = Visibility.Visible;
+            lblLength.Visibility = Visibility.Visible;
+            lblWidth.Visibility = Visibility.Visible;
 
             btnShowPassengers.Visibility = Visibility.Visible;
             lblNoResult.Visibility = Visibility.Hidden;
@@ -78,10 +87,16 @@ namespace ZBD.UI
             tbName.Visibility = Visibility.Hidden;
             tbModel.Visibility = Visibility.Hidden;
             tbSeats.Visibility = Visibility.Hidden;
+            tbLocalization.Visibility = Visibility.Hidden;
+            tbLength.Visibility = Visibility.Hidden;
+            tbWidth.Visibility = Visibility.Hidden;
 
             lblModel.Visibility = Visibility.Hidden;
             lblName.Visibility = Visibility.Hidden;
             lblSeats.Visibility = Visibility.Hidden;
+            lblLocalization.Visibility = Visibility.Hidden;
+            lblLength.Visibility = Visibility.Hidden;
+            lblWidth.Visibility = Visibility.Hidden;
 
             btnShowPassengers.Visibility = Visibility.Hidden;
         }
@@ -106,9 +121,18 @@ namespace ZBD.UI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BusDataService.GenerateAndInsertRandomData();
+            //  BusDataService.GenerateAndInsertRandomData
+            BusDataService.UpdateData();
         }
 
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            BusDataService.ClearData();
+        }
 
+        private void btnInitializeData_Click(object sender, RoutedEventArgs e)
+        {
+            BusDataService.GenerateAndInsertRandomData();
+        }
     }
 }
